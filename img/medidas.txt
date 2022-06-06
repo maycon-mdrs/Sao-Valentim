@@ -1,0 +1,13 @@
+[1]: Altura=100; Largura=108; x=0, y=15; 
+
+[2}: Altura=100; Largura=108; x=200, y=15;
+
+[3]: Altura=100; Largura=108; x=400, y=15;
+
+[4]: Altura=100; Largura=108; x=600, y=10;
+
+[5]: Altura=100; Largura=108; x=800, y=15;
+
+[6]: Altura=100; Largura=108; x=1000, y=15;
+
+[7]: Altura=100; Largura=108; x=1200, y=15;
