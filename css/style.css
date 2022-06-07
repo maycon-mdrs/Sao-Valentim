@@ -7,7 +7,7 @@
 .hero{
 	height: 100vh;
 	width: 100%;
-	background-image: url(../img/us-2.jpeg);
+	background-image: url(../img/us-final1.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -111,10 +111,11 @@ h4{
 }
 .about img{
 	height: auto;
-	width: 430px;
+	height: 580px;
 }
 .about-text{
 	width: 550px;
+	text-align: justify;
 }
 .main{
 	width: 1130px;

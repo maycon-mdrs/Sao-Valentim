@@ -1,15 +1,71 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
 body {
     background: #3B3C3C url('/img/backG.png');
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 canvas {
     display: block;
-    margin: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid black;
+}
+
+
+
+#menu {
+    display: flex;
+    justify-content:right;
+    margin-top: 30px;
+    margin-right: 20%;
+}
+
+.btn{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+    margin: 10px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+.btn:hover{
+	transform: scale(1.2);
+}
+
+
+#instrucoes {
+    position: absolute;
+    top: 580px;
+    left: 25%;
+    width: 670px;
+    height: 530px;
+}
+
+.btn-2 {
+    background-color:#f9004d;
+	color: white;
+    width: 100px;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+    margin: 10px;
+	border-radius: 30px;
+	transition: transform .4s;  
+}
+
+#keyboard {
+    background: url("/Game-Luma/Dia-dos-Namorados/img/keyboardF.png") no-repeat;
+    position: absolute;
+    top: 150px;
+    width: 670px;
+    height: 236px;
 }
