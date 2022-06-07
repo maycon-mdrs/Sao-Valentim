@@ -68,7 +68,7 @@ canvas {
 }
 
 #keyboard {
-    background: url("/Game-Luma/Dia-dos-Namorados/img/keyboardF.png") no-repeat;
+    background: url("./img/keyboardF.png") no-repeat;
     position: relative;
     top:230px;
     width: 670px;
