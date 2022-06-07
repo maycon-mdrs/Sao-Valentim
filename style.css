@@ -2,7 +2,7 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 body {
-    background: #3B3C3C url('/img/backG.png');
+    background: #3B3C3C url('./img/backG.png');
     margin: 0;
     padding: 0;
     height: 1440px;
