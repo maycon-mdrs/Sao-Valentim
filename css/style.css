@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 }
 .hero{
-	height: 100vh;
+	height: 700px;
 	width: 100%;
 	background-image: url(../img/us-final1.png);
 	background-size: cover;
@@ -56,11 +56,8 @@ nav ul li a:hover{
 .btn:hover{
 	transform: scale(1.2);
 }
-.content{
-	position: absolute;
-	top: 50%;
-	left:8%;
-	transform: translateY(-50%);
+.content {
+	margin: 8%;
 }
 h1{
 	color: white;
