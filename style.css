@@ -1,12 +1,14 @@
 * {
     font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body {
     background: #3B3C3C url('./img/backG.png');
     position: relative;
     margin: 0;
     padding: 0;
-    height: 1440px;
+    height: 2160px;
 }
 
 canvas {
@@ -29,15 +31,6 @@ canvas {
     align-items: center;
     width: 800px;
 }
-#nav-inst {
-    position: absolute;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top: 500px;
-    margin-left: 160px;
-    width: 800px;
-}
 
 .btn{
 	background-color:#f9004d;
@@ -51,7 +44,31 @@ canvas {
 	transition: transform .4s; 
 }
 .btn:hover{
-	transform: scale(1.2);
+	background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
+}
+
+.btn-2{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+    margin: 10px;
+	border-radius: 30px;
+	transition: transform .4s; 
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+.btn-2:hover{
+    background-color: transparent;
+	border: 2px solid #f9004d;
+	cursor: pointer;
 }
 
 #keyboard {
@@ -60,7 +77,32 @@ canvas {
     height: 236px;
 
     position: absolute;
-    margin-left: 50%;
-    margin-top: 50%;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
 
+#area {
+    height: 300px;
+    width: 670px;
+    position: absolute;
+
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+.area-1 {
+    background-color: #f9004d;
+    width: 330px;
+    height: 300px;
+    float: left;
+}
+
+.area-2 {
+    background-color: #f9004d;
+    margin-left: 10px;
+    width: 330px;
+    height: 300px;
+    float: left;
 }
