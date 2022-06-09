@@ -8,7 +8,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    height: 2080px;
+    height: 100%;
 }
 canvas {
     display: block;
@@ -17,6 +17,20 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
+}
+
+/* FORMATAÇÃO / ESTILO */
+h2 {
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+h3 {
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    text-align: center;
 }
 
 /* SESSÃO MENU - texto, button */
@@ -71,40 +85,192 @@ canvas {
 	cursor: pointer;
 }
 
+/* SESSÃO MODAL */
+.modal {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0,0,0,0.5);
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.modal-content {
+    background-color: #3B3C3C;
+    padding: 8px 8px;
+    width: 690px;
+    height: 500px;
+
+    border-radius: 0.8rem;
+}
+.close-btn {
+    float: right;
+    width: 24px;
+    cursor: pointer;
+    background-color: #f9004d;
+    border-radius: 0.8rem;
+    text-align: center;
+    line-height: 24px;
+}
+.close-btn:hover {
+    background-color: #800028;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
 /* SESSÃO INSTRUÇÃO - img, texto, container */
-#keyboard {
+#keyboardF {
+    position: relative;
     background: url('./img/keyboardF.png');
     width: 670px;
     height: 236px;
+    border-radius: 0.6rem;
 
-    position: absolute;
-    top:60%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 
-/* Container */
-#area {
-    height: 300px;
-    width: 670px;
-    position: absolute;
-
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -80%);
+/* Bloco na possição S */
+#inst-1 {
+    position: relative;
+    width: 42px;
+    height: 40px;
+    left: 139px;
+    bottom: 30px;
 }
-/* instrução S */
-.area-1 {
+#inst-1:hover {
+    background-color: #800028;
+}
+
+/* Bloco na possição Space */
+#inst-2 {
+    position: relative;
+    width: 324px;
+    height: 40px;
+    left: 152px;
+    top: 78px;
+}
+#inst-2:hover {
+    background-color: #800028;
+}
+
+/* Criação da instrução S */
+.inst-1-content {
     background-color: #f9004d;
-    width: 330px;
-    height: 300px;
-    float: left;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    top: 180px;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
-/* instrução Space */
-.area-2 {
+.show-inst-1 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+/* ÁREA-F - container */
+#icone {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 100px;
+}
+#img {
+    background: url('./img/LumaFG.gif') no-repeat;
+    background-size: 122px 102px;
+    position: relative; 
+    margin: auto;
+    bottom: 0px;
+    width: 300px;
+    height: 200px;
+    animation: jump 1s ease-out infinite, andar 1.5s linear infinite;
+}
+
+#img-d {
+    background: url('./img/LumaFG.gif') no-repeat;
+    background-size: 122px 102px;
+    position: relative; 
+    margin: auto;
+    bottom: 80px;
+    left: 110px;
+    width: 300px;
+    height: 200px;
+    animation: downF 0.5s ease-in-out infinite;
+}
+
+@keyframes andar {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 200px;
+    }
+}
+@keyframes jump {
+    0%, 100% {
+        bottom: 50px; 
+    }
+    45%, 65% {
+        bottom: 120px;
+    }
+}
+@keyframes downF {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: 80px;
+    }
+}
+
+/* Criação da instrução Space */
+.inst-2-content {
     background-color: #f9004d;
-    margin-left: 10px;
-    width: 330px;
-    height: 300px;
-    float: left;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    top: 70px;
+    right: 55px;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.show-inst-2 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
 }

@@ -9,24 +9,88 @@
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!----Lista Menu---->
     <nav id="menu">
         <a href="index.html" class="btn">Home</a>
         <a href="game.html" class="btn">Game</a>
+        <a class="btn" onclick="showModal()">Keys</a>
     </nav>
+
+     <!----Instruções Modal---->
+     <div class="modal" id="modal">
+         <div class="modal-content">
+            <span style="color: white;" class="close-btn" onclick="hiddenModal()">&times;</span>
+
+            <div id="areaF">
+                <h2>INSTRUCTIONS</h2>
+            </div>
+
+            <div id="keyboardF">
+                <div class="inst-1" id="inst-1" onmouseenter="showModal_box1()" onmouseleave="hiddenModal_box1()">
+                    <div class="inst-1-content" id="inst-1-content">
+                        <div id="areaF">
+                            <h2>Press <em><u>'S'</u></em> to go down</h2>
+                            <div id="icone"><i class="fas fa-arrow-down"></i></div>
+                            <div id="img-d"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inst-2" id="inst-2" onmouseenter="showModal_box2()" onmouseleave="hiddenModal_box2()">
+                    <div class="inst-2-content" id="inst-2-content">
+                        <div id="areaF">
+                            <h2>Press <em><u>'SPACEBAR'</em></u> to jump</h2>
+                            <div id="icone"><i class="fas fa-arrow-up"></i></div>
+                            <div id="img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
 
     <!----GAME.js---->
     <script src="sketch.js"></script>
-    
-    <!----Instruções---->
-    <a href="#keyboard" class="btn-2">KEYS</a>
-    <div id="keyboard"></div>
-    <div id="area">
-        <div class="area-1">teste1</div>
-        <div class="area-2">teste2</div>
-    </div>
+
+    <!----MODAL.js---->
+    <script>
+        /* MODAL - INSTRUÇÕES */
+        function showModal() {
+            var element = document.getElementById("modal");
+            element.classList.add("show-modal");
+        }
+
+        function hiddenModal() {
+            var element = document.getElementById("modal");
+            element.classList.remove("show-modal");
+        }
+
+        /* MODAL - BOX (1) */
+        function showModal_box1() {
+            var element = document.getElementById("inst-1-content");
+            element.classList.add("show-inst-1");
+        } 
+
+        function hiddenModal_box1() {
+            var element = document.getElementById("inst-1-content");
+            element.classList.remove("show-inst-1");
+        }
+
+        /* MODAL - BOX (2) */
+        function showModal_box2() {
+            var element = document.getElementById("inst-2-content");
+            element.classList.add("show-inst-2");
+        } 
+
+        function hiddenModal_box2() {
+            var element = document.getElementById("inst-2-content");
+            element.classList.remove("show-inst-2");
+        }
+    </script>
 
     <!----Main Canvas - Iniciação automática---->
 </body>

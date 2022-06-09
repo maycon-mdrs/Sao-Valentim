@@ -141,8 +141,8 @@ function draw() {
             }
         }
         if((keyDown("space") && girl.y >= 380)) {
-            girl.velocityY = -13;
-            back_girl.velocityY = -13;
+            girl.velocityY = -14;
+            back_girl.velocityY = -14;
             jumpSound.play();
             //40 = seta para baixo
         }  
