@@ -3,6 +3,7 @@
 }
 body {
     background: #3B3C3C url('./img/backG.png');
+    position: relative;
     margin: 0;
     padding: 0;
     height: 1440px;
@@ -18,11 +19,24 @@ canvas {
 }
 
 
-
 #menu {
     display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     justify-content:right;
-    margin-right: 20%;
+    align-items: center;
+    width: 800px;
+}
+#nav-inst {
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 500px;
+    margin-left: 160px;
+    width: 800px;
 }
 
 .btn{
@@ -40,56 +54,13 @@ canvas {
 	transform: scale(1.2);
 }
 
-
-#instrucoes {
-    position: absolute;
-    top: 570px;
-    left: 25%;
-    width: 670px;
-    height: 860px;
-}
-
-.btn-2 {
-    background-color:#f9004d;
-	color: white;
-    width: 100px;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-    margin-bottom: 10%;
-    margin-left: 40%;
-	border-radius: 30px;
-    text-align: center;
-	transition: transform .4s;  
-}
-.btn-2:hover{
-	transform: scale(1.2);
-}
-
 #keyboard {
-    background: url("./img/keyboardF.png") no-repeat;
-    position: relative;
-    top:230px;
+    background: url('./img/keyboardF.png');
     width: 670px;
     height: 236px;
-}
 
-#area-1 {
-    background-color: #f9004d;
-    margin: 20px;
-    position: relative;
-    top:240px;
-    width: 300px;
-    height: 200px;
-    float: left;
-}
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 50%;
 
-#area-2 {
-    background-color: #f9004d;
-    margin: 20px;
-    position: relative;
-    width: 300px;
-    height: 200px;
-    float: right;
 }
