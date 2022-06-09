@@ -4,7 +4,7 @@
     padding: 0;
 }
 body {
-    background: #3B3C3C url('./img/backG.png');
+    background: #3B3C3C url('/img/backG.png');
     position: relative;
     margin: 0;
     padding: 0;
@@ -135,7 +135,7 @@ h3 {
 /* SESSÃO INSTRUÇÃO - img, texto, container */
 #keyboardF {
     position: relative;
-    background: url('./img/keyboardF.png');
+    background: url('/img/keyboardF.png');
     width: 670px;
     height: 236px;
     border-radius: 0.6rem;
@@ -203,7 +203,7 @@ h3 {
     top: 100px;
 }
 #img {
-    background: url('./img/LumaFG.gif') no-repeat;
+    background: url('/img/LumaFG.gif') no-repeat;
     background-size: 122px 102px;
     position: relative; 
     margin: auto;
@@ -214,7 +214,7 @@ h3 {
 }
 
 #img-d {
-    background: url('./img/LumaFG.gif') no-repeat;
+    background: url('/img/LumaFG.gif') no-repeat;
     background-size: 122px 102px;
     position: relative; 
     margin: auto;
