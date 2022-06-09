@@ -1,2 +1,3 @@
 *.html linguist-detectable=Solidity
 *.css linguist-detectable=Solidity
+*.js linguist-detectable=true
