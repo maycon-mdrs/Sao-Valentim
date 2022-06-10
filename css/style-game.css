@@ -36,6 +36,7 @@ h3 {
 /* SESSÃO MENU - texto, button */
 #menu {
     display: flex;
+    margin: 10px;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
