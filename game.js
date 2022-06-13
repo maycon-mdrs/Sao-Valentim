@@ -147,7 +147,7 @@ function draw() {
             jumpSound.play();
             //40 = seta para baixo
         } 
-        if((touches.length ===1) && girl.y >= 380){
+        if((touches.length ===1) && (girl.y >= 380) && (floor.velocityX < -4.05)){
             girl.velocityY = -14;
             back_girl.velocityY = -14;
             jumpSound.play();
