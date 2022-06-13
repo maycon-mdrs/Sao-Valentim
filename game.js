@@ -140,12 +140,19 @@ function draw() {
                 getRandomArbitrary(20,50);
             }
         }
-        if((keyDown("space") && girl.y >= 380)) {
+        if((keyDown("space") && girl.y >= 380) ) {
             girl.velocityY = -14;
             back_girl.velocityY = -14;
             jumpSound.play();
             //40 = seta para baixo
         }  
+        if((mouseIsPressed==true) && (girl.y >= 380) && (floor.velocityX < -4.02)){
+            girl.velocityY = -14;
+            back_girl.velocityY = -14;
+            jumpSound.play();
+            //40 = seta para baixo
+            console.log("tjump");
+        }
         if((keyDown("s"))){
             girl.velocityY = +18;
             back_girl.velocityY = +18;
@@ -179,11 +186,10 @@ function draw() {
         obstaclesGroup.setLifetimeEach(-1);
         obstaclesGroup.setVelocityXEach(0);
         
-        if(mousePressedOver(restart)) {
+        if((mousePressedOver(restart)) || (mouseIsPressed==true)){
             reset();
         }
     } 
-  
  
     drawSprites();
     fill("white");
@@ -245,4 +251,4 @@ window.addEventListener('keydown', (e) => {
     if (e.keyCode === 32 && e.target === document.body) {  
       e.preventDefault();  
     }  
-  });
+});
