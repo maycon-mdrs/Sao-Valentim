@@ -43,7 +43,8 @@ function preload(){
 
 function setup() {
     //TELA JOGO
-    createCanvas(800,450);
+    cnv = createCanvas(800,450);
+    //cnv.touchStarted(touchJump);
     
     //FUNDO
     ground=createSprite(0,140,0,0);
@@ -97,7 +98,7 @@ function setup() {
 
 function draw() {
     background("black");
-  
+    
     // console.log(girl.y);
     //Gravity
     girl.velocityY = girl.velocityY + 0.8;
@@ -140,19 +141,12 @@ function draw() {
                 getRandomArbitrary(20,50);
             }
         }
-        if((keyDown("space") && girl.y >= 380) ) {
+        if((keyDown("space") && girl.y >= 380)) {
             girl.velocityY = -14;
             back_girl.velocityY = -14;
             jumpSound.play();
             //40 = seta para baixo
-        }  
-        if((mouseIsPressed==true) && (girl.y >= 380) && (floor.velocityX < -4.02)){
-            girl.velocityY = -14;
-            back_girl.velocityY = -14;
-            jumpSound.play();
-            //40 = seta para baixo
-            console.log("tjump");
-        }
+        } 
         if((keyDown("s"))){
             girl.velocityY = +18;
             back_girl.velocityY = +18;
@@ -186,7 +180,7 @@ function draw() {
         obstaclesGroup.setLifetimeEach(-1);
         obstaclesGroup.setVelocityXEach(0);
         
-        if((mousePressedOver(restart)) || (mouseIsPressed==true)){
+        if(mousePressedOver(restart)){
             reset();
         }
     } 
@@ -252,3 +246,12 @@ window.addEventListener('keydown', (e) => {
       e.preventDefault();  
     }  
 });
+
+function touchStarted() {
+    if(girl.y >= 380){
+        girl.velocityY = -14;
+        back_girl.velocityY = -14;
+        jumpSound.play();
+        //40 = seta para baixo
+    }
+}
