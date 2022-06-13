@@ -24,7 +24,10 @@
 </head>
 <body id="telaJ" class="disable-dbl-tap-zoom">
     <!----Lista Menu---->
-    <nav id="menu">
+    <nav id="menu" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+    unselectable="on"
+    onselectstart="return false;" 
+    onmousedown="return false;">
         <a href="index.html" class="btn">Home</a>
         <a href="game.html" class="btn">Game</a>
         <a class="btn" onclick="showModal()">Keys</a>
