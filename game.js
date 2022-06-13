@@ -147,6 +147,12 @@ function draw() {
             jumpSound.play();
             //40 = seta para baixo
         } 
+        if((touches.length ===1) && girl.y >= 380){
+            girl.velocityY = -14;
+            back_girl.velocityY = -14;
+            jumpSound.play();
+            //40 = seta para baixo
+        }
         if((keyDown("s"))){
             girl.velocityY = +18;
             back_girl.velocityY = +18;
@@ -180,7 +186,7 @@ function draw() {
         obstaclesGroup.setLifetimeEach(-1);
         obstaclesGroup.setVelocityXEach(0);
         
-        if(mousePressedOver(restart)){
+        if(mousePressedOver(restart) || (touches.length===1)){
             reset();
         }
     } 
@@ -246,12 +252,3 @@ window.addEventListener('keydown', (e) => {
       e.preventDefault();  
     }  
 });
-
-function touchStarted() {
-    if(girl.y >= 380){
-        girl.velocityY = -14;
-        back_girl.velocityY = -14;
-        jumpSound.play();
-        //40 = seta para baixo
-    }
-}
