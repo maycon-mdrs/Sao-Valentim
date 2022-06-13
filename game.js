@@ -252,3 +252,10 @@ window.addEventListener('keydown', (e) => {
       e.preventDefault();  
     }  
 });
+
+//Hold disable smartphone
+window.oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
