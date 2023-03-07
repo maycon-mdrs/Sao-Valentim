@@ -25,8 +25,8 @@ function preload(){
     //poste_image=loadImage("img/posteF.png");
 
     //PERSONAGEM
-    girl_running=loadAnimation("img/luma/lumaF1.png", "img/luma/lumaF2.png", "img/luma/lumaF3.png", "img/luma/lumaF4.png", "img/luma/lumaF5.png", "img/luma/lumaF6.png", "img/luma/lumaF7.png"); 
-    girl_collided=loadImage("img/luma/lumaFM.png");
+    girl_running=loadAnimation("img/personagem/persoF1.png", "img/personagem/persoF2.png", "img/personagem/persoF3.png", "img/personagem/persoF4.png", "img/personagem/persoF5.png", "img/personagem/persoF6.png", "img/personagem/persoF7.png"); 
+    girl_collided=loadImage("img/personagem/persoFM.png");
 
     //OBSTACULO
     obstacle1=loadImage("img/cone_2.png");
