@@ -215,7 +215,7 @@ h3 {
     top: 100px;
 }
 #img {
-    background: url('../img/LumaFG.gif') no-repeat;
+    background: url('../img/persoFG.gif') no-repeat;
     background-size: 122px 102px;
     position: relative; 
     margin: auto;
@@ -226,7 +226,7 @@ h3 {
 }
 
 #img-d {
-    background: url('../img/LumaFG.gif') no-repeat;
+    background: url('../img/persoFG.gif') no-repeat;
     background-size: 122px 102px;
     position: relative; 
     margin: auto;
